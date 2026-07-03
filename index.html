@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina Library – Your Self-Study Sanctuary</title>
+  <meta name="description" content="Lumina Library offers dedicated self-study sections including Science, Arts, History, Mathematics, Computers, Law, Medical, and Philosophy for focused learning." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Crimson+Text:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ═══ NAVBAR ═══ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="6" width="10" height="28" rx="2" fill="url(#bookGrad1)"/>
+            <rect x="16" y="4" width="10" height="30" rx="2" fill="url(#bookGrad2)"/>
+            <rect x="28" y="8" width="8" height="26" rx="2" fill="url(#bookGrad3)"/>
+            <defs>
+              <linearGradient id="bookGrad1" x1="4" y1="6" x2="14" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#a78bfa"/>
+                <stop offset="1" stop-color="#7c3aed"/>
+              </linearGradient>
+              <linearGradient id="bookGrad2" x1="16" y1="4" x2="26" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#f9a8d4"/>
+                <stop offset="1" stop-color="#ec4899"/>
+              </linearGradient>
+              <linearGradient id="bookGrad3" x1="28" y1="8" x2="36" y2="34" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#67e8f9"/>
+                <stop offset="1" stop-color="#0891b2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <span class="logo-text">Lumina <span class="logo-accent">Library</span></span>
+      </div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" id="navHome">Home</a></li>
+        <li><a href="#sections" class="nav-link" id="navSections">Sections</a></li>
+        <li><a href="#facilities" class="nav-link" id="navFacilities">Facilities</a></li>
+        <li><a href="#timings" class="nav-link" id="navTimings">Timings</a></li>
+        <li><a href="#rules" class="nav-link" id="navRules">Rules</a></li>
+        <li><a href="#contact" class="nav-link" id="navContact">Contact</a></li>
+      </ul>
+      <a href="#sections" class="btn-nav" id="btnExplore">Explore Sections</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+      <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="hero-badge">
+        <span class="badge-dot"></span>
+        <span>Open for Self-Study &amp; Research</span>
+      </div>
+      <h1 class="hero-title">
+        Your Perfect Place<br />
+        to <span class="gradient-text">Learn &amp; Grow</span>
+      </h1>
+      <p class="hero-subtitle">
+        Lumina Library offers 8 dedicated self-study sections — each curated to give you the ideal environment for focused learning, deep research, and academic excellence.
+      </p>
+      <div class="hero-actions">
+        <a href="#sections" class="btn-primary" id="btnViewSections">View All Sections</a>
+        <a href="#timings" class="btn-ghost" id="btnCheckTimings">Check Timings</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Study Sections</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">12K+</span>
+          <span class="stat-label">Books &amp; Resources</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">500+</span>
+          <span class="stat-label">Study Seats</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat">
+          <span class="stat-num">6 AM</span>
+          <span class="stat-label">Opens Daily</span>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint" id="scrollHint">
+      <span>Scroll to Explore</span>
+      <div class="scroll-arrow"></div>
+    </div>
+  </section>
+
+  <!-- ═══ SECTIONS ═══ -->
+  <section class="sections-area" id="sections">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">What We Offer</span>
+        <h2 class="section-title">Study Sections</h2>
+        <p class="section-desc">Choose your domain and immerse yourself in a specially curated environment designed for peak concentration and learning efficiency.</p>
+      </div>
+
+      <div class="sections-filter" id="sectionsFilter">
+        <button class="filter-btn active" data-filter="all" id="filterAll">All</button>
+        <button class="filter-btn" data-filter="science" id="filterScience">Science</button>
+        <button class="filter-btn" data-filter="arts" id="filterArts">Arts &amp; Humanities</button>
+        <button class="filter-btn" data-filter="professional" id="filterProfessional">Professional</button>
+      </div>
+
+      <div class="sections-grid" id="sectionsGrid">
+
+        <!-- Science & Technology -->
+        <div class="section-card" data-category="science" id="cardScience">
+          <div class="card-glow" style="--glow: #3b82f6;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #1e3a8a, #3b82f6);">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="10" stroke="white" stroke-width="2.5"/><path d="M24 4v6M24 38v6M4 24h6M38 24h6" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M10.1 10.1l4.25 4.25M33.65 33.65l4.25 4.25M37.9 10.1l-4.25 4.25M14.35 33.65l-4.25 4.25" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card-number">01</div>
+          <h3 class="card-title">Science &amp; Technology</h3>
+          <p class="card-desc">Explore physics, chemistry, biology, engineering, and cutting-edge technology research with access to 2,500+ scientific journals and textbooks.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 2,500+ Books</span>
+            <span class="meta-tag">💺 80 Seats</span>
+          </div>
+          <div class="card-floor">Floor 1 – Wing A</div>
+          <a href="#contact" class="card-link" id="linkScience">Find This Section →</a>
+        </div>
+
+        <!-- Arts & Literature -->
+        <div class="section-card" data-category="arts" id="cardArts">
+          <div class="card-glow" style="--glow: #ec4899;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #831843, #ec4899);">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M12 6h24a2 2 0 012 2v32a2 2 0 01-2 2H12a2 2 0 01-2-2V8a2 2 0 012-2z" stroke="white" stroke-width="2.5"/><path d="M16 16h16M16 22h16M16 28h10" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="34" cy="34" r="3" fill="white" fill-opacity="0.7"/></svg>
+          </div>
+          <div class="card-number">02</div>
+          <h3 class="card-title">Arts &amp; Literature</h3>
+          <p class="card-desc">Dive into world literature, poetry, fine arts, creative writing, drama, and cultural studies. A haven for the creatively inclined mind.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,800+ Books</span>
+            <span class="meta-tag">💺 60 Seats</span>
+          </div>
+          <div class="card-floor">Floor 1 – Wing B</div>
+          <a href="#contact" class="card-link" id="linkArts">Find This Section →</a>
+        </div>
+
+        <!-- History & Geography -->
+        <div class="section-card" data-category="arts" id="cardHistory">
+          <div class="card-glow" style="--glow: #f59e0b;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #78350f, #f59e0b);">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="16" stroke="white" stroke-width="2.5"/><path d="M24 8v4M24 36v4M8 24h4M36 24h4" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M16 16c4 2 8-2 16 0" stroke="white" stroke-width="2" stroke-linecap="round"/><path d="M12 28c4-4 8 0 12-2s8-2 12 2" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card-number">03</div>
+          <h3 class="card-title">History &amp; Geography</h3>
+          <p class="card-desc">Travel through time and space with our rich collection of world history, civilizations, maps, geopolitics, and archaeological studies.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,600+ Books</span>
+            <span class="meta-tag">💺 50 Seats</span>
+          </div>
+          <div class="card-floor">Floor 2 – Wing A</div>
+          <a href="#contact" class="card-link" id="linkHistory">Find This Section →</a>
+        </div>
+
+        <!-- Mathematics -->
+        <div class="section-card" data-category="science" id="cardMath">
+          <div class="card-glow" style="--glow: #10b981;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #064e3b, #10b981);">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="4" stroke="white" stroke-width="2.5"/><path d="M18 24h12M24 18v12" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M16 34l4-4M28 34l4-4M28 18l4-4M16 18l4-4" stroke="white" stroke-width="1.5" stroke-linecap="round" opacity="0.6"/></svg>
+          </div>
+          <div class="card-number">04</div>
+          <h3 class="card-title">Mathematics</h3>
+          <p class="card-desc">Master calculus, algebra, statistics, discrete math, and number theory with comprehensive textbooks, problem sets, and reference material.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,200+ Books</span>
+            <span class="meta-tag">💺 70 Seats</span>
+          </div>
+          <div class="card-floor">Floor 2 – Wing B</div>
+          <a href="#contact" class="card-link" id="linkMath">Find This Section →</a>
+        </div>
+
+        <!-- Computers & IT -->
+        <div class="section-card" data-category="science" id="cardComputers">
+          <div class="card-glow" style="--glow: #06b6d4;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #164e63, #06b6d4);">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="24" rx="3" stroke="white" stroke-width="2.5"/><path d="M16 38h16M24 34v4" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M14 20l4 4-4 4M24 28h8" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+          <div class="card-number">05</div>
+          <h3 class="card-title">Computers &amp; IT</h3>
+          <p class="card-desc">Sharpen your programming, networking, cybersecurity, AI, and software engineering skills with our up-to-date digital resources and coding guides.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,400+ Books</span>
+            <span class="meta-tag">💺 90 Seats</span>
+          </div>
+          <div class="card-floor">Floor 3 – Wing A</div>
+          <a href="#contact" class="card-link" id="linkComputers">Find This Section →</a>
+        </div>
+
+        <!-- Law & Politics -->
+        <div class="section-card" data-category="professional" id="cardLaw">
+          <div class="card-glow" style="--glow: #8b5cf6;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #4c1d95, #8b5cf6);">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6v36M12 18l12-6 12 6M12 30l12-6 12 6" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M8 38h32" stroke="white" stroke-width="2.5" stroke-linecap="round"/><circle cx="24" cy="6" r="2.5" fill="white"/></svg>
+          </div>
+          <div class="card-number">06</div>
+          <h3 class="card-title">Law &amp; Politics</h3>
+          <p class="card-desc">Delve into constitutional law, international relations, political science, governance, human rights, and legal case studies for aspirants and scholars.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,100+ Books</span>
+            <span class="meta-tag">💺 55 Seats</span>
+          </div>
+          <div class="card-floor">Floor 3 – Wing B</div>
+          <a href="#contact" class="card-link" id="linkLaw">Find This Section →</a>
+        </div>
+
+        <!-- Medical & Health -->
+        <div class="section-card" data-category="professional" id="cardMedical">
+          <div class="card-glow" style="--glow: #f43f5e;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #881337, #f43f5e);">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="8" y="8" width="32" height="32" rx="6" stroke="white" stroke-width="2.5"/><path d="M24 16v16M16 24h16" stroke="white" stroke-width="2.5" stroke-linecap="round"/></svg>
+          </div>
+          <div class="card-number">07</div>
+          <h3 class="card-title">Medical &amp; Health</h3>
+          <p class="card-desc">Access anatomy, physiology, pharmacology, clinical guides, nursing, public health, and biomedical research for healthcare professionals and students.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 1,900+ Books</span>
+            <span class="meta-tag">💺 65 Seats</span>
+          </div>
+          <div class="card-floor">Floor 4 – Wing A</div>
+          <a href="#contact" class="card-link" id="linkMedical">Find This Section →</a>
+        </div>
+
+        <!-- Philosophy & Religion -->
+        <div class="section-card" data-category="arts" id="cardPhilosophy">
+          <div class="card-glow" style="--glow: #f97316;"></div>
+          <div class="card-icon" style="background: linear-gradient(135deg, #7c2d12, #f97316);">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="20" r="10" stroke="white" stroke-width="2.5"/><path d="M24 30v12M18 38h12" stroke="white" stroke-width="2.5" stroke-linecap="round"/><path d="M24 14a4 4 0 000 8" stroke="white" stroke-width="2" stroke-linecap="round"/><circle cx="24" cy="20" r="2" fill="white"/></svg>
+          </div>
+          <div class="card-number">08</div>
+          <h3 class="card-title">Philosophy &amp; Religion</h3>
+          <p class="card-desc">Explore ethics, metaphysics, logic, world religions, theology, and ancient wisdom traditions. A quiet space for intellectual and spiritual reflection.</p>
+          <div class="card-meta">
+            <span class="meta-tag">📚 900+ Books</span>
+            <span class="meta-tag">💺 40 Seats</span>
+          </div>
+          <div class="card-floor">Floor 4 – Wing B</div>
+          <a href="#contact" class="card-link" id="linkPhilosophy">Find This Section →</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FACILITIES ═══ -->
+  <section class="facilities" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">What We Provide</span>
+        <h2 class="section-title">Library Facilities</h2>
+        <p class="section-desc">Everything you need for an uninterrupted, productive study session — all under one roof.</p>
+      </div>
+      <div class="facilities-grid">
+        <div class="facility-item" id="facilityWifi">
+          <div class="facility-icon">📶</div>
+          <h4>High-Speed Wi-Fi</h4>
+          <p>Blazing 1 Gbps internet access in all sections</p>
+        </div>
+        <div class="facility-item" id="facilitySilent">
+          <div class="facility-icon">🤫</div>
+          <h4>Silent Zones</h4>
+          <p>Designated no-noise zones for deep focus</p>
+        </div>
+        <div class="facility-item" id="facilityLocker">
+          <div class="facility-icon">🔒</div>
+          <h4>Secure Lockers</h4>
+          <p>Free bag storage at the entrance for members</p>
+        </div>
+        <div class="facility-item" id="facilityCafe">
+          <div class="facility-icon">☕</div>
+          <h4>Cafe &amp; Snack Bar</h4>
+          <p>Light refreshments available on every floor</p>
+        </div>
+        <div class="facility-item" id="facilityPrint">
+          <div class="facility-icon">🖨️</div>
+          <h4>Print &amp; Copy</h4>
+          <p>Printing, scanning, and photocopying services</p>
+        </div>
+        <div class="facility-item" id="facilityAC">
+          <div class="facility-icon">❄️</div>
+          <h4>Climate Controlled</h4>
+          <p>Fully air-conditioned, temperature-managed spaces</p>
+        </div>
+        <div class="facility-item" id="facilityDigital">
+          <div class="facility-icon">💻</div>
+          <h4>Digital Terminals</h4>
+          <p>50+ computers available for research and study</p>
+        </div>
+        <div class="facility-item" id="facilityHandicap">
+          <div class="facility-icon">♿</div>
+          <h4>Accessible Design</h4>
+          <p>Wheelchair-friendly ramps, lifts, and restrooms</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ TIMINGS ═══ -->
+  <section class="timings" id="timings">
+    <div class="container">
+      <div class="timings-inner">
+        <div class="timings-text">
+          <span class="eyebrow">Plan Your Visit</span>
+          <h2 class="section-title" style="text-align: left;">Library Timings</h2>
+          <p class="section-desc" style="text-align: left;">We are open 7 days a week so your learning never has to stop. Early birds and night owls are both welcome!</p>
+          <div class="timing-cards">
+            <div class="timing-card" id="timingWeekday">
+              <div class="timing-day">Monday – Friday</div>
+              <div class="timing-time">6:00 AM – 10:00 PM</div>
+              <div class="timing-badge open">Open</div>
+            </div>
+            <div class="timing-card" id="timingWeekend">
+              <div class="timing-day">Saturday – Sunday</div>
+              <div class="timing-time">7:00 AM – 8:00 PM</div>
+              <div class="timing-badge open">Open</div>
+            </div>
+            <div class="timing-card holiday" id="timingHoliday">
+              <div class="timing-day">Public Holidays</div>
+              <div class="timing-time">9:00 AM – 5:00 PM</div>
+              <div class="timing-badge limited">Limited Hours</div>
+            </div>
+          </div>
+        </div>
+        <div class="timings-visual">
+          <div class="clock-wrap">
+            <div class="clock" id="liveClock">
+              <div class="clock-face">
+                <div class="hand hour-hand" id="hourHand"></div>
+                <div class="hand min-hand" id="minHand"></div>
+                <div class="hand sec-hand" id="secHand"></div>
+                <div class="clock-center"></div>
+                <div class="clock-12">12</div>
+                <div class="clock-3">3</div>
+                <div class="clock-6">6</div>
+                <div class="clock-9">9</div>
+              </div>
+            </div>
+            <div class="digital-time" id="digitalTime"></div>
+            <div class="digital-date" id="digitalDate"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ RULES ═══ -->
+  <section class="rules" id="rules">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Community Guidelines</span>
+        <h2 class="section-title">Library Rules</h2>
+        <p class="section-desc">To ensure a peaceful and productive environment for all our visitors, please follow these guidelines.</p>
+      </div>
+      <div class="rules-grid">
+        <div class="rule-item" id="ruleQuiet">
+          <div class="rule-icon rule-must">🤫</div>
+          <div class="rule-text">
+            <strong>Maintain Silence</strong>
+            <span>Please keep noise to a minimum. Phones on silent mode at all times.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleFood">
+          <div class="rule-icon rule-no">🚫</div>
+          <div class="rule-text">
+            <strong>No Food Inside Sections</strong>
+            <span>Food and drinks are allowed only in the designated café areas.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleId">
+          <div class="rule-icon rule-must">🪪</div>
+          <div class="rule-text">
+            <strong>Carry Valid ID</strong>
+            <span>A valid ID or library card is required to enter the building.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleClean">
+          <div class="rule-icon rule-must">🧹</div>
+          <div class="rule-text">
+            <strong>Keep Sections Clean</strong>
+            <span>Please return books to their shelves and keep your study space tidy.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleReserve">
+          <div class="rule-icon rule-must">💼</div>
+          <div class="rule-text">
+            <strong>No Seat Reservation</strong>
+            <span>Seats are first-come-first-served. Do not leave personal items to "save" seats.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleBags">
+          <div class="rule-icon rule-no">🎒</div>
+          <div class="rule-text">
+            <strong>No Large Bags Inside</strong>
+            <span>Bags larger than A4 size must be deposited at the locker room.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="rulePhoto">
+          <div class="rule-icon rule-no">📷</div>
+          <div class="rule-text">
+            <strong>No Photography</strong>
+            <span>Photography is not permitted to protect the privacy of other readers.</span>
+          </div>
+        </div>
+        <div class="rule-item" id="ruleSmoke">
+          <div class="rule-icon rule-no">🚬</div>
+          <div class="rule-text">
+            <strong>No Smoking</strong>
+            <span>Smoking and vaping are strictly prohibited in all areas of the library.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CONTACT / MAP ═══ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <span class="eyebrow">Get In Touch</span>
+        <h2 class="section-title">Find &amp; Contact Us</h2>
+        <p class="section-desc">Questions about a section, memberships, or resources? We're here to help.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item" id="contactAddress">
+            <div class="contact-ico">📍</div>
+            <div>
+              <strong>Address</strong>
+              <span>Lumina Library, Knowledge Park,<br/>Civil Lines, New Delhi – 110001</span>
+            </div>
+          </div>
+          <div class="contact-item" id="contactPhone">
+            <div class="contact-ico">📞</div>
+            <div>
+              <strong>Phone</strong>
+              <span>+91 11-2345-6789</span>
+            </div>
+          </div>
+          <div class="contact-item" id="contactEmail">
+            <div class="contact-ico">✉️</div>
+            <div>
+              <strong>Email</strong>
+              <span>info@luminalibrary.org</span>
+            </div>
+          </div>
+          <div class="contact-item" id="contactMembership">
+            <div class="contact-ico">🎓</div>
+            <div>
+              <strong>Membership</strong>
+              <span>Annual: ₹1,200 &nbsp;|&nbsp; Monthly: ₹150</span>
+            </div>
+          </div>
+          <div class="contact-form-mini">
+            <h4>Send Us a Message</h4>
+            <input type="text" placeholder="Your Name" id="inputName" class="form-input" />
+            <input type="email" placeholder="Your Email" id="inputEmail" class="form-input" />
+            <textarea placeholder="Your Message" id="inputMessage" class="form-textarea" rows="4"></textarea>
+            <button class="btn-primary" id="btnSendMsg" onclick="handleContact(event)">Send Message</button>
+            <p id="msgFeedback" class="msg-feedback" style="display:none;"></p>
+          </div>
+        </div>
+        <div class="map-box" id="mapBox">
+          <div class="map-placeholder">
+            <div class="map-pin-anim">
+              <div class="map-pin">📍</div>
+              <div class="map-ring ring-1"></div>
+              <div class="map-ring ring-2"></div>
+              <div class="map-ring ring-3"></div>
+            </div>
+            <div class="map-address-label">
+              <strong>Lumina Library</strong>
+              <span>Knowledge Park, Civil Lines, New Delhi</span>
+            </div>
+            <a href="https://maps.google.com/?q=Civil+Lines,+New+Delhi" target="_blank" class="btn-map" id="btnGoogleMaps">Open in Google Maps ↗</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">
+              <svg viewBox="0 0 40 40" fill="none"><rect x="4" y="6" width="10" height="28" rx="2" fill="url(#fGrad1)"/><rect x="16" y="4" width="10" height="30" rx="2" fill="url(#fGrad2)"/><rect x="28" y="8" width="8" height="26" rx="2" fill="url(#fGrad3)"/><defs><linearGradient id="fGrad1" x1="4" y1="6" x2="14" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#a78bfa"/><stop offset="1" stop-color="#7c3aed"/></linearGradient><linearGradient id="fGrad2" x1="16" y1="4" x2="26" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#f9a8d4"/><stop offset="1" stop-color="#ec4899"/></linearGradient><linearGradient id="fGrad3" x1="28" y1="8" x2="36" y2="34" gradientUnits="userSpaceOnUse"><stop stop-color="#67e8f9"/><stop offset="1" stop-color="#0891b2"/></linearGradient></defs></svg>
+            </div>
+            <span class="logo-text">Lumina <span class="logo-accent">Library</span></span>
+          </div>
+          <p>A sanctuary for curious minds. Open daily for self-study, research, and lifelong learning.</p>
+        </div>
+        <div class="footer-links">
+          <div class="footer-col">
+            <h5>Sections</h5>
+            <ul>
+              <li><a href="#sections" id="fScience">Science &amp; Tech</a></li>
+              <li><a href="#sections" id="fArts">Arts &amp; Literature</a></li>
+              <li><a href="#sections" id="fHistory">History &amp; Geography</a></li>
+              <li><a href="#sections" id="fMath">Mathematics</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>More Sections</h5>
+            <ul>
+              <li><a href="#sections" id="fComputers">Computers &amp; IT</a></li>
+              <li><a href="#sections" id="fLaw">Law &amp; Politics</a></li>
+              <li><a href="#sections" id="fMedical">Medical &amp; Health</a></li>
+              <li><a href="#sections" id="fPhilosophy">Philosophy</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h5>Visit</h5>
+            <ul>
+              <li><a href="#facilities" id="fFacilities">Facilities</a></li>
+              <li><a href="#timings" id="fTimings">Timings</a></li>
+              <li><a href="#rules" id="fRules">Rules</a></li>
+              <li><a href="#contact" id="fContact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Lumina Library. All rights reserved.</span>
+        <span>Designed with ❤️ for knowledge seekers.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
